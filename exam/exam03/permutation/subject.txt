@@ -1,0 +1,83 @@
+--------------------------------------------------
+Nom de l'exercice: permutation  
+Fichiers attendus: permutation.c  
+Fonctions autorisées: printf, malloc, free, strdup, qsort, strncpy, strlen, exit  
+--------------------------------------------------
+
+Écrire un programme qui prend en paramètre une chaîne de caractères et qui affiche, sur la sortie standard, 
+toutes les permutations possibles des caractères de cette chaîne, 
+organisées en colonnes verticales, suivies d'une nouvelle ligne.
+
+ Spécifications : 
+
+- Le programme doit générer toutes les permutations uniques de la chaîne donnée.
+- Les permutations doivent être affichées de manière verticale.  
+  Pour une chaîne de longueur  n , il y aura  n!  permutations. Ces permutations 
+  doivent être disposées en  (n-1)!  lignes et  n  colonnes, de sorte que la lecture des 
+  colonnes de haut en bas donne l'ordre suivant :
+
+  Par exemple, pour l'entrée `"abc"`, la sortie devra être :
+
+  ```
+  abc bac cab
+  acb bca cba
+  ```
+
+  (Lorsque vous pipez la sortie avec `cat -e`, chaque ligne se termine par un symbole `$`.)
+
+- Si le nombre de paramètres n'est pas exactement 1, le programme doit simplement afficher une nouvelle ligne.
+- L'entrée, lorsqu'elle est fournie, sera toujours valide.
+-  Contrainte :  Vous n'êtes pas autorisé(e) à utiliser des boucles (ex. : `for`, `while`, etc.). Toutes les itérations doivent être réalisées par récursion.
+
+ Exemples : 
+
+```
+$> ./permutation abc | cat -e
+abc bac cab$
+acb bca cba$
+$> ./permutation | cat -e
+$
+$> ./permutation hello | cat -e
+[la sortie doit afficher toutes les permutations de "hello" disposées verticalement]
+```
+
+Bonne chance !
+
+--------------------------------------------------
+Exercise Name: permutation  
+Expected files: permutation.c  
+Allowed functions: printf, malloc, free, strdup, qsort, strncpy, strlen, exit  
+--------------------------------------------------
+
+Write a program that takes one string argument and prints, to standard output, 
+all possible permutations of the characters in that string, 
+arranged in vertical columns, followed by a newline.
+
+Specifications:
+
+- The program must generate all unique permutations of the given string.
+- The permutations must be displayed vertically.  
+  For a string of length n, there will be n! permutations. These permutations 
+  must be arranged into (n-1)! rows and n columns, so that reading each column 
+  from top to bottom gives the next permutations in order.
+
+  For example, for the input "abc", the output must be:
+
+  abc bac cab
+  acb bca cba
+
+  (When you pipe the output through `cat -e`, each line should end with a `$` symbol.)
+
+- If the number of arguments is not exactly 1, the program should simply print a newline.
+- The input, when provided, will always be valid.
+- Constraint: You are not allowed to use loops (e.g., `for`, `while`, etc.). All iteration must be done using recursion.
+
+Examples:
+
+$> ./permutation abc | cat -e
+abc bac cab$
+acb bca cba$
+$> ./permutation | cat -e
+$
+$> ./permutation hello | cat -e
+[the output must show all permutations of "hello" arranged vertically]

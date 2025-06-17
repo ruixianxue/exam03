@@ -1,0 +1,7 @@
+make a function to skip white space, to scan char, to scan int and to scan string
+combine them in receive input
+int ft_scanf(const char format, ...)
+va_list ap;
+va_start(ap, format);
+deal with unsupported format
+iterate through the format specifiers, run recieve input
