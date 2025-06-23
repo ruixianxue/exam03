@@ -2,18 +2,18 @@
 
 int	main(int argc, char **argv)
 {
-	int	n;
-	int	*board;
+	int	n; // number of queens - argv[1]
+	int	*board; // board[col] = row
 
 	if (argc != 2)
 		return 0;
-	n = atoi(argv[1]);
+	n = atoi(argv[1]); // get the number of the queens
 	if (n < 1)
 		return 0;
 	board = malloc(n * sizeof(int));
 	if (!board)
 		return 0;
-	solve(board, n, 0);
+	solve(board, n, 0); // backtracking start from queen 1 (col = 0)
 	return 0;
 }
 

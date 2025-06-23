@@ -11,6 +11,7 @@ char *ft_strdup(char *str)
 {
 	int i;
 	char *new;
+
 	i = 0;
 	if (!str)
 	{
@@ -28,6 +29,7 @@ char *ft_strdup(char *str)
 	new[i] = '\0';
 	return (new);
 }
+
 char *get_next_line(int fd)
 {
 	int i;

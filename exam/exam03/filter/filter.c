@@ -4,19 +4,6 @@
 #include <stdlib.h>
 
 
-void	ft_strcat(char *dst, char *src)
-{
-	int	dst_len;
-	int	i = 0;
-
-	dst_len = strlen(dst);
-	while (src[i])
-	{
-		dst[dst_len + i] = src[i];
-		i++;
-	}
-	dst[dst_len + i] = '\0';
-}
 /* 比较字符串 s1 和 s2 的前 n 个字符。
 如果 s1 < s2，返回负数；
 如果 s1 == s2，返回 0；
@@ -93,14 +80,10 @@ char	*search_and_replace(char *str, char *needle)
 	{
 		if (ft_strncmp(&str[i], needle, needle_len) == 0)//如果存在与needle相同的字符串
 		{
-			if (j++ < needle_len)
-				i += needle_len;//直接删除
-			else
-			{
+			while (j++ < needle_len)
 				res[r++] = '*';
-				res[r++] = '*';
-				i += needle_len;
-			}
+			i += needle_len;
+			j = 0;
 		}
 		else
 			res[r++] = str[i++];
